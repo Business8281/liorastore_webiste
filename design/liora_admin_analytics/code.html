@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LIORA Admin | Editorial Control</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#24331a",
+              "error": "#ba1a1a",
+              "secondary": "#735b24",
+              "outline": "#75786f",
+              "tertiary-container": "#444643",
+              "on-primary-fixed": "#111f08",
+              "surface": "#fcf9f8",
+              "background": "#fcf9f8",
+              "primary-container": "#3a4a2f",
+              "surface-dim": "#dcd9d9",
+              "secondary-fixed-dim": "#e3c281",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f0edec",
+              "on-tertiary-container": "#b3b4af",
+              "surface-variant": "#e5e2e1",
+              "on-primary-container": "#a6b997",
+              "on-error": "#ffffff",
+              "inverse-surface": "#313030",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "tertiary": "#2e302d",
+              "on-tertiary-fixed-variant": "#454744",
+              "secondary-fixed": "#ffdf9f",
+              "on-tertiary-fixed": "#1a1c19",
+              "primary-fixed-dim": "#bacda9",
+              "on-secondary-container": "#785f28",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e5e2e1",
+              "secondary-container": "#fedb98",
+              "outline-variant": "#c5c8bd",
+              "on-secondary-fixed-variant": "#5a430e",
+              "on-surface-variant": "#444840",
+              "surface-tint": "#536346",
+              "surface-container-high": "#ebe7e7",
+              "on-surface": "#1c1b1b",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#d5e9c4",
+              "tertiary-fixed": "#e3e3de",
+              "surface-bright": "#fcf9f8",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary-fixed": "#261a00",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#bacda9",
+              "error-container": "#ffdad6",
+              "inverse-on-surface": "#f3f0ef",
+              "on-background": "#1c1b1b",
+              "on-primary-fixed-variant": "#3b4b30"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-stone-50 dark:bg-stone-950 flex flex-col py-6 space-y-2 z-50">
+<div class="px-6 mb-8">
+<h1 class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100">LIORA Admin</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-stone-500 mt-1">Editorial Control</p>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Overview
+            </a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                Inventory
+            </a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+                Orders
+            </a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+                Customers
+            </a>
+<!-- Active State: Analytics -->
+<a class="bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100 rounded-lg mx-2 px-4 py-3 font-bold flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+                Analytics
+            </a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto px-6 pt-6 border-t border-outline-variant/20">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-stone-200">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional male editor in a minimalist office setting, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH111orAqZg1a6pV_ctqQj8WkwEDZehyja_h59HcT5y2aay783cqy8psGpLZ3V0zBYJYHL_kLeWByGkYV2wvavntPtmsc_aJ3HilQe2skOuITlwQ5YiqHtxhen7ERrt4FCBNt3FTmxCQWHQWQKT3xd1Pg8X6KljtYK74rfDNnJHcUqwwSEI9AOmMrLGdtd7lVdbvZmFtimUjkdAigddmST0lRWFPsvkRWTgnbBZmWmBKYWF8mALhSDktqDWmGUHhu731usGhO6uP74"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Admin User</p>
+<p class="text-[10px] text-stone-500 uppercase">Editorial Control</p>
+</div>
+</div>
+<button class="w-full py-3 px-4 bg-primary text-on-primary text-xs font-bold rounded-xl hover:opacity-90 transition-opacity">
+                View Storefront
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen pb-20">
+<!-- Header / Date Range Picker -->
+<header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-md px-12 py-8 flex justify-between items-end">
+<div>
+<h2 class="font-headline text-4xl text-primary font-bold tracking-tight">Analytics Dashboard</h2>
+<p class="font-body text-outline mt-2 italic">Curating performance insights for the LIORA ecosystem.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-low px-4 py-2 rounded-xl flex items-center gap-3 border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-xs font-label font-bold uppercase tracking-wider">Oct 01, 2024 - Oct 31, 2024</span>
+<span class="material-symbols-outlined text-sm cursor-pointer" data-icon="expand_more">expand_more</span>
+</div>
+<button class="p-2 rounded-xl border border-outline-variant/30 text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="file_download">file_download</span>
+</button>
+</div>
+</header>
+<section class="px-12 mt-8">
+<!-- Key Performance Indicators (KPIs) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[12px_40px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5">
+<p class="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-outline mb-4">Total Revenue</p>
+<h3 class="font-headline text-3xl font-bold text-primary">$124,592.00</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="text-emerald-700 text-xs font-bold flex items-center">+12.5%</span>
+<span class="text-[10px] text-outline uppercase tracking-widest">vs last month</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[12px_40px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5">
+<p class="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-outline mb-4">Conversion Rate</p>
+<h3 class="font-headline text-3xl font-bold text-primary">3.42%</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="text-emerald-700 text-xs font-bold flex items-center">+0.8%</span>
+<span class="text-[10px] text-outline uppercase tracking-widest">vs last month</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[12px_40px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5">
+<p class="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-outline mb-4">Average Order Value</p>
+<h3 class="font-headline text-3xl font-bold text-primary">$186.40</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="text-error text-xs font-bold flex items-center">-2.1%</span>
+<span class="text-[10px] text-outline uppercase tracking-widest">vs last month</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[12px_40px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5">
+<p class="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-outline mb-4">Active Customers</p>
+<h3 class="font-headline text-3xl font-bold text-primary">12,840</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="text-emerald-700 text-xs font-bold flex items-center">+4.2%</span>
+<span class="text-[10px] text-outline uppercase tracking-widest">vs last month</span>
+</div>
+</div>
+</div>
+<!-- Main Charts Row -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<!-- Revenue Growth Visualization (Large) -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-10 rounded-xl shadow-[12px_40px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5 h-full">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h4 class="font-headline text-2xl font-bold text-primary">Revenue Velocity</h4>
+<p class="text-xs text-outline mt-1 italic">Real-time fiscal growth tracking</p>
+</div>
+<div class="flex gap-4">
+<span class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Current
+                            </span>
+<span class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-outline">
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span> Previous
+                            </span>
+</div>
+</div>
+<!-- Simplified Visual Chart Representation using CSS Gradients/Shapes -->
+<div class="relative h-64 w-full flex items-end gap-2 group">
+<div class="flex-1 bg-surface-container h-[40%] rounded-t-sm relative group/bar hover:bg-primary-container/20 transition-colors"></div>
+<div class="flex-1 bg-surface-container h-[55%] rounded-t-sm relative group/bar hover:bg-primary-container/20 transition-colors"></div>
+<div class="flex-1 bg-surface-container h-[48%] rounded-t-sm relative group/bar hover:bg-primary-container/20 transition-colors"></div>
+<div class="flex-1 bg-primary h-[65%] rounded-t-sm relative group/bar">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-primary text-on-primary text-[10px] px-2 py-1 rounded hidden group-hover/bar:block">$12.4k</div>
+</div>
+<div class="flex-1 bg-primary h-[72%] rounded-t-sm relative group/bar"></div>
+<div class="flex-1 bg-primary h-[68%] rounded-t-sm relative group/bar"></div>
+<div class="flex-1 bg-primary h-[85%] rounded-t-sm relative group/bar"></div>
+<div class="flex-1 bg-primary h-[78%] rounded-t-sm relative group/bar"></div>
+<div class="flex-1 bg-primary h-[92%] rounded-t-sm relative group/bar"></div>
+<div class="flex-1 bg-primary h-[88%] rounded-t-sm relative group/bar"></div>
+<div class="flex-1 bg-primary h-[95%] rounded-t-sm relative group/bar"></div>
+<div class="flex-1 bg-primary h-[100%] rounded-t-sm relative group/bar"></div>
+</div>
+<div class="flex justify-between mt-6 px-2">
+<span class="text-[10px] font-label font-bold uppercase text-outline">Oct 01</span>
+<span class="text-[10px] font-label font-bold uppercase text-outline">Oct 15</span>
+<span class="text-[10px] font-label font-bold uppercase text-outline">Oct 31</span>
+</div>
+</div>
+<!-- Popular Products Column -->
+<div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/10">
+<h4 class="font-headline text-2xl font-bold text-primary mb-8">Editorial Favorites</h4>
+<p class="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-outline mb-6">Top Performing SKU's</p>
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden bg-white shadow-sm flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="minimalist white ceramic Dutch oven with brass handle on a soft beige background, professional studio product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJOwefGNidyf5ahVE9J3I9iX6JMwsbwwDom_iw1lb0g8AU4VUIv0oFG7ZVlQV08y0YwT_k8ZzznG47n0RMgmkh7rH4OmtN1jRz-Nc7DPQHDezJz6kV-W5_gH-PXdbZX6TXuVzqhgye2cUwcLnobbLewoneHiBvpi5yt5CEsgejx4sAzeNtTSM6EmzP5O883-aFQuLNaGzClIhVcc1jvqbvmBToiSFx8mJ8kfy0mblxMdxRuq43Am0HD3wfa0LkHjUI1vtB7vEc5VxE"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-primary">Ceramic Heirloom Pot</p>
+<p class="text-[10px] text-outline uppercase tracking-widest mt-1">482 Sales</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary">$124.00</p>
+<p class="text-[10px] text-emerald-700 font-bold uppercase mt-1">+14%</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden bg-white shadow-sm flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="set of elegant chef knives with dark wooden handles arranged on a marble surface with artistic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZZrKWHH61kfiHPQf0vWlYf9rv8sTHjlbKWC1X1MP1rrgfB6HEofv-uQf4Qd6Iyh0sXb-dNAmOP3gQOkFLKZwmd-bV8SVnzdDga8q8kix6OT0g7Me2fcsYgRYaFUmbtFvPaR--0m7hn83_pJegTKTXRTbQT7TzVEdtWK8nu-ZsveEvp_P31wlhI_Uz3UPZF5db8yNa9q0_FGwnZxqk-a-JvncSNZ9wT9pH0UOODMxb6WoVnfF7-yoJbCsCv4YPqfrxd-huJ4XpDtxG"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-primary">The Artisan Knife Set</p>
+<p class="text-[10px] text-outline uppercase tracking-widest mt-1">321 Sales</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary">$350.00</p>
+<p class="text-[10px] text-emerald-700 font-bold uppercase mt-1">+8%</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden bg-white shadow-sm flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="close-up of a premium copper sauté pan with beautiful metallic reflections and a sleek handle, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF0C9VcZe11-MONQ2kTWw7zsf_FkrsazI2bO87isplOiB1fjI4QtLQQoWWXhr9QgxXmS54Q-pJS8Xn9qdkjbSJLkUjM8p5xwUajGk8ZEkvxDhh8hI99xM6ecWcipZWOjRaOShqlOoaUdzkjdUFWYEiMyOw39DHnaLxsG_zvvkhD2QEKmzxe-QCNyGAmxELrPZaNDX2SXjDYZVAuI7FXjecA2P5N0gWayzp84nFwywoktEZv8uTXZVZH9xKzIAaNCO4CGUGfHlkEA4V"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-primary">Copper Core Sauté</p>
+<p class="text-[10px] text-outline uppercase tracking-widest mt-1">215 Sales</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary">$210.00</p>
+<p class="text-[10px] text-error font-bold uppercase mt-1">-4%</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-12 text-primary border-b border-outline-variant/50 pb-2 text-xs font-bold uppercase tracking-widest hover:border-primary transition-all text-center">
+                        Download Full Inventory Report
+                    </button>
+</div>
+</div>
+<!-- Conversion funnel & Asymmetric Detail -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+<div class="relative bg-primary text-on-primary p-12 rounded-xl overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline text-3xl font-bold mb-4">Customer Sentiment</h4>
+<p class="font-body text-on-primary-container text-sm leading-relaxed max-w-sm mb-8 italic">"The curation at LIORA has transformed my kitchen. Quality is unmatched."</p>
+<div class="flex items-center gap-6">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-primary-container mb-1">Repeat Rate</p>
+<p class="text-2xl font-headline font-bold">42.5%</p>
+</div>
+<div class="h-10 w-[1px] bg-on-primary-container/20"></div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-primary-container mb-1">Loyalty Score</p>
+<p class="text-2xl font-headline font-bold">9.8/10</p>
+</div>
+</div>
+</div>
+<!-- Abstract Background Shape -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/30 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-1/4 w-32 h-32 bg-secondary/20 rounded-full translate-y-1/2"></div>
+</div>
+<div class="flex flex-col justify-center py-6">
+<div class="flex items-center gap-4 mb-4">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full uppercase tracking-widest">Toxin-Free Analytics</span>
+</div>
+<h4 class="font-headline text-3xl font-bold text-primary mb-6">Sustainable Growth Model</h4>
+<p class="font-body text-on-surface-variant text-base leading-relaxed mb-8">Our audience values longevity over quantity. The high AOV ($186.40) correlates directly with our editorial focus on heirloom-quality cookware rather than disposable trends.</p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<p class="font-headline text-xl font-bold text-primary mb-1">Organic Acquisition</p>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[72%]"></div>
+</div>
+<p class="text-[10px] text-outline mt-2 uppercase tracking-widest">72% of total traffic</p>
+</div>
+<div>
+<p class="font-headline text-xl font-bold text-primary mb-1">Direct to Inbox</p>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[18%]"></div>
+</div>
+<p class="text-[10px] text-outline mt-2 uppercase tracking-widest">18% of total traffic</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="ml-64 bg-stone-100 dark:bg-stone-900 w-[calc(100%-16rem)] py-12 px-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-sans text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400">© 2024 LIORA Culinary Editorial. Toxin-Free Living.</p>
+<div class="flex gap-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 font-sans text-xs uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 font-sans text-xs uppercase tracking-widest" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 font-sans text-xs uppercase tracking-widest" href="#">Wholesale</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 font-sans text-xs uppercase tracking-widest" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

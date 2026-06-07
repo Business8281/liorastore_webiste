@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#c5c8bd",
+              "primary-container": "#3a4a2f",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fedb98",
+              "background": "#fcf9f8",
+              "tertiary-fixed": "#e3e3de",
+              "tertiary": "#2e302d",
+              "on-surface-variant": "#444840",
+              "on-primary-fixed": "#111f08",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#5a430e",
+              "outline": "#75786f",
+              "on-primary-fixed-variant": "#3b4b30",
+              "surface-tint": "#536346",
+              "on-primary-container": "#a6b997",
+              "on-background": "#1c1b1b",
+              "on-tertiary-container": "#b3b4af",
+              "inverse-on-surface": "#f3f0ef",
+              "surface-bright": "#fcf9f8",
+              "primary": "#24331a",
+              "secondary-fixed": "#ffdf9f",
+              "primary-fixed-dim": "#bacda9",
+              "primary-fixed": "#d5e9c4",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#e3c281",
+              "surface-variant": "#e5e2e1",
+              "surface": "#fcf9f8",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#ebe7e7",
+              "on-tertiary-fixed": "#1a1c19",
+              "surface-container-highest": "#e5e2e1",
+              "surface-container-low": "#f6f3f2",
+              "on-tertiary-fixed-variant": "#454744",
+              "secondary": "#735b24",
+              "inverse-surface": "#313030",
+              "surface-container": "#f0edec",
+              "tertiary-container": "#444643",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-primary": "#bacda9",
+              "surface-dim": "#dcd9d9",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#261a00",
+              "on-secondary-container": "#785f28",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #ffffff; /* User requested pure white background */
+        }
+        .editorial-indent {
+            padding-left: clamp(1rem, 5vw, 4rem);
+        }
+    </style>
+</head>
+<body class="font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-serif tracking-widest uppercase text-emerald-950 dark:text-stone-100">LIORA</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-stone-500 dark:text-stone-400 font-serif italic tracking-tight hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300" href="#">Collections</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif italic tracking-tight hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300" href="#">Our Story</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif italic tracking-tight hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300" href="#">Journal</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif italic tracking-tight hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300" href="#">Care</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center transition-transform scale-95 duration-200">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-500" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-48 pb-32">
+<div class="max-w-[1440px] mx-auto px-12">
+<!-- Header Section -->
+<header class="mb-24 grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8">
+<p class="font-label text-xs tracking-[0.2em] uppercase text-secondary mb-4">Legal Framework</p>
+<h1 class="font-headline text-6xl md:text-8xl italic tracking-tighter text-primary leading-none">Terms &amp; Conditions</h1>
+</div>
+<div class="md:col-span-4 flex flex-col justify-end">
+<p class="font-body text-sm text-outline leading-relaxed border-l border-outline-variant/30 pl-6 italic">
+                        Last Updated: October 24, 2024<br/>
+                        Effective immediately for all editorial and commercial interactions.
+                    </p>
+</div>
+</header>
+<!-- Introduction Bento -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+<div class="md:col-span-2 bg-surface-container-low p-12 rounded-xl flex flex-col justify-between">
+<div>
+<h2 class="font-headline text-3xl mb-6 text-primary">Precedence of Quality</h2>
+<p class="font-body text-lg leading-relaxed text-on-surface-variant max-w-2xl">
+                            By engaging with LIORA, you enter an agreement defined by mutual respect for craftsmanship and conscious living. Our terms are designed to protect the integrity of our editorial vision and the quality of your experience.
+                        </p>
+</div>
+<div class="mt-12 flex gap-4">
+<span class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-[0.7rem] font-bold uppercase tracking-wider">Toxin-Free Ethics</span>
+<span class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-[0.7rem] font-bold uppercase tracking-wider">Conscious Commerce</span>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-12 rounded-xl flex flex-col justify-center items-center text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-on-primary-container to-transparent"></div>
+<span class="material-symbols-outlined text-5xl mb-6 font-thin" data-icon="verified_user">verified_user</span>
+<h3 class="font-headline text-2xl mb-4 italic">The Liora Guarantee</h3>
+<p class="font-body text-sm opacity-80 leading-loose">All interactions are governed by the highest standards of digital transparency and consumer advocacy.</p>
+</div>
+</section>
+<!-- Detailed Content Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+<!-- Sticky Sidebar Navigation -->
+<aside class="hidden md:block md:col-span-3 sticky top-32 h-fit">
+<nav class="space-y-6">
+<div class="space-y-4">
+<p class="font-label text-[0.65rem] uppercase tracking-widest text-outline">Sections</p>
+<a class="block font-body text-sm text-primary font-bold hover:text-secondary transition-colors" href="#agreement">01. Agreement to Terms</a>
+<a class="block font-body text-sm text-outline hover:text-primary transition-colors" href="#intellectual">02. Intellectual Property</a>
+<a class="block font-body text-sm text-outline hover:text-primary transition-colors" href="#orders">03. Orders &amp; Craftsmanship</a>
+<a class="block font-body text-sm text-outline hover:text-primary transition-colors" href="#liability">04. Limitation of Liability</a>
+<a class="block font-body text-sm text-outline hover:text-primary transition-colors" href="#privacy">05. Data Philosophy</a>
+</div>
+<div class="pt-8 border-t border-outline-variant/20">
+<p class="font-body text-xs text-outline leading-relaxed italic">Need a physical copy? <br/><a class="underline underline-offset-4 decoration-secondary/30" href="#">Download PDF Version</a></p>
+</div>
+</nav>
+</aside>
+<!-- Reading Canvas -->
+<article class="md:col-span-9 max-w-3xl">
+<div class="mb-24" id="agreement">
+<h3 class="font-headline text-4xl mb-8 text-primary">01. Agreement to Terms</h3>
+<div class="space-y-6 font-body text-on-surface-variant leading-loose">
+<p>This website is operated by LIORA Editorial. Throughout the site, the terms “we”, “us” and “our” refer to LIORA. LIORA offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>
+<p>By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>
+</div>
+</div>
+<div class="mb-24" id="intellectual">
+<h3 class="font-headline text-4xl mb-8 text-primary">02. Intellectual Property Rights</h3>
+<div class="space-y-6 font-body text-on-surface-variant leading-loose">
+<p>The Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of LIORA and its licensors. Our intellectual property includes, but is not limited to, our proprietary "Conscious Craft" manufacturing methodologies, photography, and editorial copy.</p>
+<blockquote class="pl-8 border-l-2 border-secondary-container italic text-primary/80 py-2 my-8">
+                                "The aesthetic of LIORA is an expression of our collective soul. Any unauthorized reproduction of our visual or narrative assets is strictly prohibited."
+                            </blockquote>
+<p>The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of LIORA.</p>
+</div>
+</div>
+<div class="mb-24" id="orders">
+<div class="p-12 bg-surface-container-low rounded-xl mb-8">
+<h3 class="font-headline text-4xl mb-8 text-primary">03. Orders &amp; Craftsmanship</h3>
+<div class="space-y-6 font-body text-on-surface-variant leading-loose">
+<p>We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address.</p>
+<p>Prices for our products are subject to change without notice. We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container rounded-lg border border-outline-variant/10">
+<span class="font-label text-[0.6rem] uppercase tracking-widest text-secondary block mb-2">Shipping Policy</span>
+<p class="text-sm">Standard delivery within 5-7 business days via carbon-neutral transit.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-lg border border-outline-variant/10">
+<span class="font-label text-[0.6rem] uppercase tracking-widest text-secondary block mb-2">Returns</span>
+<p class="text-sm">30-day window for unused items in original editorial packaging.</p>
+</div>
+</div>
+</div>
+<div class="mb-24" id="liability">
+<h3 class="font-headline text-4xl mb-8 text-primary">04. Limitation of Liability</h3>
+<div class="space-y-6 font-body text-on-surface-variant leading-loose">
+<p>In no case shall LIORA, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages.</p>
+</div>
+</div>
+<div class="mb-12" id="privacy">
+<h3 class="font-headline text-4xl mb-8 text-primary">05. Data Philosophy</h3>
+<p class="font-body text-on-surface-variant leading-loose mb-8">
+                            Your submission of personal information through the store is governed by our Privacy Policy. We view data as a private conversation, never a commodity.
+                        </p>
+<a class="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-widest text-primary group" href="#">
+                            Read Privacy Policy 
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-12 max-w-[1440px] mx-auto">
+<div class="space-y-8">
+<div class="text-lg font-serif text-emerald-950 dark:text-stone-100">LIORA</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 underline" href="#">Privacy Policy</a>
+<a class="font-sans text-xs tracking-widest uppercase text-emerald-900 dark:text-stone-100 font-bold hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 underline" href="#">Terms of Service</a>
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 underline" href="#">Shipping &amp; Returns</a>
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 underline" href="#">Contact Us</a>
+</div>
+</div>
+<div class="flex md:justify-end items-end">
+<p class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400">
+                    © 2024 LIORA Editorial. Conscious Craftsmanship.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

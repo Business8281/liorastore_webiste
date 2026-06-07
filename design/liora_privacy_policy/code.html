@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#c5c8bd",
+              "primary-container": "#3a4a2f",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fedb98",
+              "background": "#fcf9f8",
+              "tertiary-fixed": "#e3e3de",
+              "tertiary": "#2e302d",
+              "on-surface-variant": "#444840",
+              "on-primary-fixed": "#111f08",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#5a430e",
+              "outline": "#75786f",
+              "on-primary-fixed-variant": "#3b4b30",
+              "surface-tint": "#536346",
+              "on-primary-container": "#a6b997",
+              "on-background": "#1c1b1b",
+              "on-tertiary-container": "#b3b4af",
+              "inverse-on-surface": "#f3f0ef",
+              "surface-bright": "#fcf9f8",
+              "primary": "#24331a",
+              "secondary-fixed": "#ffdf9f",
+              "primary-fixed-dim": "#bacda9",
+              "primary-fixed": "#d5e9c4",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#e3c281",
+              "surface-variant": "#e5e2e1",
+              "surface": "#fcf9f8",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#ebe7e7",
+              "on-tertiary-fixed": "#1a1c19",
+              "surface-container-highest": "#e5e2e1",
+              "surface-container-low": "#f6f3f2",
+              "on-tertiary-fixed-variant": "#454744",
+              "secondary": "#735b24",
+              "inverse-surface": "#313030",
+              "surface-container": "#f0edec",
+              "tertiary-container": "#444643",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-primary": "#bacda9",
+              "surface-dim": "#dcd9d9",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#261a00",
+              "on-secondary-container": "#785f28",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #fcf9f8; color: #1c1b1b; }
+        .serif-italic { font-family: 'Newsreader', serif; font-style: italic; }
+        .no-line-rule { border: none !important; }
+        .tonal-shift { transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl no-line-rule tonal-shift">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-serif tracking-widest uppercase text-emerald-950 dark:text-stone-100">
+                LIORA
+            </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-serif italic tracking-tight text-stone-500 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300" href="#">Collections</a>
+<a class="font-serif italic tracking-tight text-stone-500 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300" href="#">Our Story</a>
+<a class="font-serif italic tracking-tight text-stone-500 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300" href="#">Journal</a>
+<a class="font-serif italic tracking-tight text-stone-500 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300" href="#">Care</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="scale-95 duration-200 text-emerald-900 dark:text-emerald-500">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-40 pb-24 px-6 md:px-12 max-w-[1440px] mx-auto">
+<!-- Editorial Header -->
+<header class="mb-24 md:mb-32 max-w-4xl">
+<h1 class="font-headline text-6xl md:text-8xl font-light tracking-tight leading-none mb-8">
+                Privacy <span class="serif-italic">as standard.</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                Transparency is at the heart of our editorial philosophy. We believe your personal data deserves the same conscious craftsmanship as our culinary tools.
+            </p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Sidebar Navigation (Sticky) -->
+<aside class="lg:col-span-3 sticky top-48 hidden lg:block">
+<nav class="space-y-6">
+<a class="block font-label text-xs uppercase tracking-widest text-primary border-l-2 border-primary pl-4" href="#introduction">01. Introduction</a>
+<a class="block font-label text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors pl-4" href="#collection">02. Data Collection</a>
+<a class="block font-label text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors pl-4" href="#usage">03. Information Usage</a>
+<a class="block font-label text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors pl-4" href="#rights">04. Your Rights</a>
+<a class="block font-label text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors pl-4" href="#cookies">05. Digital Cookies</a>
+</nav>
+</aside>
+<!-- Content Area -->
+<div class="lg:col-span-9 space-y-32">
+<!-- Section 01: Introduction -->
+<section class="max-w-3xl" id="introduction">
+<div class="mb-12">
+<span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold tracking-widest uppercase mb-6">Effective: Jan 2024</span>
+<h2 class="font-headline text-4xl mb-8">Guided by Ethics.</h2>
+<div class="prose prose-stone prose-lg">
+<p class="font-body text-lg text-on-surface leading-loose">
+                                At LIORA Editorial, your privacy is not a checkbox; it is a fundamental value. This policy outlines how we curate and safeguard your information when you engage with our digital gallery and purchase our artisanal tools. We maintain a "No-Toxin" approach to data, just as we do for our cookware.
+                            </p>
+</div>
+</div>
+</section>
+<!-- Section 02: Data Collection - Bento Style Cards -->
+<section id="collection">
+<h2 class="font-headline text-4xl mb-12">What we gather.</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container p-12 rounded-xl transition-all hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="person">person</span>
+<h3 class="font-label text-sm uppercase font-bold tracking-widest mb-4">Identity Data</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                Includes your name, email address, and shipping preferences provided during purchase or journal subscription.
+                            </p>
+</div>
+<div class="bg-surface-container-low p-12 rounded-xl transition-all hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="payments">payments</span>
+<h3 class="font-label text-sm uppercase font-bold tracking-widest mb-4">Transaction Details</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                Records of artisanal tools purchased, payment confirmation (processed securely through encrypted gateways), and order history.
+                            </p>
+</div>
+<div class="md:col-span-2 bg-primary text-on-primary p-12 rounded-xl flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
+<div class="flex-1 z-10">
+<h3 class="font-headline text-3xl mb-4">Anonymous Curation.</h3>
+<p class="font-body text-on-primary/80 leading-relaxed mb-6">
+                                    We use technical telemetry to understand how you navigate our editorial pieces. This data is fully anonymized and used only to improve the gallery's rhythm and flow.
+                                </p>
+</div>
+<div class="w-full md:w-1/3 aspect-square bg-primary-container rounded-lg overflow-hidden shrink-0">
+<img alt="abstract aesthetic" class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="abstract close-up of dark ceramic texture with soft shadows and organic curves in a minimalist art style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN8U5aAlqCbxoc37starkoMurbr52efZ0Hde9H3UhPJ_TMnvb8F0cgnRelKTPXQW2ydhy05XCZors51wPFQMtDsFzseHa1SRdTd_UCj0yMnL6MLfs7Nlg9ooI5Njrss8tA8ql_nUSXIIhim2F8uZh2XLbO90uXSO9MKt805jG209BUWKtIdtQ3Smn4igFaMo5NuZw5vJA_mho54YU1ceO8TlKZPYHB6kjSIogp3QAHAJQ-QnWVO9XM8fakyxqXNLJLljdbHGR9W01d"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 03: Information Usage -->
+<section class="max-w-3xl" id="usage">
+<h2 class="font-headline text-4xl mb-8">Purposeful Intent.</h2>
+<div class="space-y-12">
+<div class="flex gap-8 group">
+<div class="text-3xl font-serif italic text-outline-variant group-hover:text-primary transition-colors">01</div>
+<div>
+<h4 class="font-body font-semibold text-lg mb-2">Order Fulfillment</h4>
+<p class="text-on-surface-variant leading-relaxed">Ensuring your consciously crafted tools reach your kitchen with the care they deserve.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="text-3xl font-serif italic text-outline-variant group-hover:text-primary transition-colors">02</div>
+<div>
+<h4 class="font-body font-semibold text-lg mb-2">Editorial Updates</h4>
+<p class="text-on-surface-variant leading-relaxed">Sharing recipes, artisanal stories, and care guides via our Journal, only when you opt-in.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="text-3xl font-serif italic text-outline-variant group-hover:text-primary transition-colors">03</div>
+<div>
+<h4 class="font-body font-semibold text-lg mb-2">Service Refinement</h4>
+<p class="text-on-surface-variant leading-relaxed">Analyzing aggregated interactions to refine our digital interface and product availability.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 04: Your Rights - Signature Design -->
+<section class="bg-stone-100 p-12 md:p-24 rounded-3xl" id="rights">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl mb-12">Your Digital <span class="serif-italic">Autonomy.</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h4 class="font-label text-xs uppercase font-bold tracking-widest mb-4">Right to Access</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Request a full transcript of the data we hold about your profile at any time.</p>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase font-bold tracking-widest mb-4">Right to Erasure</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">The "Right to be Forgotten." We will purge your identifiable history upon request.</p>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase font-bold tracking-widest mb-4">Data Portability</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Transfer your information to another curator in a structured, machine-readable format.</p>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase font-bold tracking-widest mb-4">Correction</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Ensure your details are as accurate as our precision-engineered cookware.</p>
+</div>
+</div>
+<div class="mt-16">
+<a class="inline-flex items-center gap-4 py-4 px-8 bg-primary text-on-primary rounded-xl font-body font-medium hover:bg-primary-container transition-all group" href="mailto:privacy@liora.editorial">
+                                Exercise your rights
+                                <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 05: Cookies -->
+<section class="max-w-3xl" id="cookies">
+<h2 class="font-headline text-4xl mb-8">Digital Cookies.</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">
+                        We use minimal cookies to maintain your session and shopping bag integrity. Unlike standard e-commerce, we do not allow third-party tracking pixels to follow you across the web.
+                    </p>
+<div class="border-t border-outline-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-sm text-on-surface-variant italic">Last updated: September 12, 2023</p>
+<button class="text-primary font-label text-xs uppercase tracking-widest underline decoration-1 underline-offset-8 hover:decoration-2 transition-all">Manage Preferences</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-stone-100 dark:bg-stone-950 tonal-shift">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-12 max-w-[1440px] mx-auto">
+<div>
+<div class="text-lg font-serif text-emerald-950 dark:text-stone-100 mb-6">
+                    LIORA
+                </div>
+<p class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400">
+                    © 2024 LIORA Editorial. Conscious Craftsmanship.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col space-y-4">
+<a class="font-sans text-xs tracking-widest uppercase text-emerald-900 dark:text-stone-100 font-bold hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 underline" href="#">Privacy Policy</a>
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 transition-opacity" href="#">Terms of Service</a>
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 transition-opacity" href="#">Shipping &amp; Returns</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 transition-opacity" href="#">Contact Us</a>
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 transition-opacity" href="#">Wholesale</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

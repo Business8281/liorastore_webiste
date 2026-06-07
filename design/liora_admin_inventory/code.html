@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LIORA Admin | Inventory Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#24331a",
+              "error": "#ba1a1a",
+              "secondary": "#735b24",
+              "outline": "#75786f",
+              "tertiary-container": "#444643",
+              "on-primary-fixed": "#111f08",
+              "surface": "#fcf9f8",
+              "background": "#fcf9f8",
+              "primary-container": "#3a4a2f",
+              "surface-dim": "#dcd9d9",
+              "secondary-fixed-dim": "#e3c281",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f0edec",
+              "on-tertiary-container": "#b3b4af",
+              "surface-variant": "#e5e2e1",
+              "on-primary-container": "#a6b997",
+              "on-error": "#ffffff",
+              "inverse-surface": "#313030",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "tertiary": "#2e302d",
+              "on-tertiary-fixed-variant": "#454744",
+              "secondary-fixed": "#ffdf9f",
+              "on-tertiary-fixed": "#1a1c19",
+              "primary-fixed-dim": "#bacda9",
+              "on-secondary-container": "#785f28",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e5e2e1",
+              "secondary-container": "#fedb98",
+              "outline-variant": "#c5c8bd",
+              "on-secondary-fixed-variant": "#5a430e",
+              "on-surface-variant": "#444840",
+              "surface-tint": "#536346",
+              "surface-container-high": "#ebe7e7",
+              "on-surface": "#1c1b1b",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#d5e9c4",
+              "tertiary-fixed": "#e3e3de",
+              "surface-bright": "#fcf9f8",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary-fixed": "#261a00",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#bacda9",
+              "error-container": "#ffdad6",
+              "inverse-on-surface": "#f3f0ef",
+              "on-background": "#1c1b1b",
+              "on-primary-fixed-variant": "#3b4b30"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex overflow-hidden">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-stone-50 dark:bg-stone-950 flex flex-col py-6 space-y-2 z-50">
+<div class="px-6 mb-8">
+<h1 class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100">LIORA Admin</h1>
+<p class="font-sans font-medium text-xs tracking-wide text-stone-500 uppercase mt-1">Editorial Control</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">dashboard</span> Overview
+            </a>
+<a class="bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100 rounded-lg mx-2 px-4 py-3 font-bold flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">inventory_2</span> Inventory
+            </a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">shopping_bag</span> Orders
+            </a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">group</span> Customers
+            </a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">leaderboard</span> Analytics
+            </a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-medium text-sm hover:opacity-90 transition-opacity">
+                View Storefront
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 h-screen overflow-y-auto bg-surface-container">
+<!-- Top Context Header -->
+<header class="px-12 py-10 flex justify-between items-end">
+<div>
+<h2 class="text-4xl font-headline italic text-on-surface">Inventory Management</h2>
+<p class="text-on-surface-variant font-body mt-2">Curating the finest toxin-free culinary tools.</p>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest flex items-center gap-2 hover:shadow-lg transition-shadow">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 400;">add</span>
+                Add Product
+            </button>
+</header>
+<!-- Search & Filter Bar -->
+<section class="px-12 mb-12">
+<div class="bg-surface-container-lowest rounded-xl p-6 flex flex-wrap items-center gap-6 shadow-sm">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary text-sm font-body" placeholder="Search product name, SKU, or tag..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label text-xs uppercase tracking-widest text-outline">Filter:</span>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-full text-xs font-medium">All</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-medium hover:bg-surface-variant">Cookware</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-medium hover:bg-surface-variant">Tools</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-medium hover:bg-surface-variant">Textiles</button>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-2 text-error bg-error-container/20 px-4 py-2 rounded-lg cursor-pointer hover:bg-error-container/40 transition-colors">
+<span class="material-symbols-outlined text-sm">notification_important</span>
+<span class="text-xs font-bold uppercase tracking-wider">Restock Alerts (4)</span>
+</div>
+</div>
+</section>
+<!-- Inventory Grid -->
+<section class="px-12 pb-20">
+<div class="grid grid-cols-1 gap-1">
+<!-- Table Header -->
+<div class="grid grid-cols-12 px-6 py-4 text-xs font-label uppercase tracking-widest text-outline border-b border-outline-variant/20">
+<div class="col-span-5">Product Details</div>
+<div class="col-span-2">Category</div>
+<div class="col-span-2">Stock Level</div>
+<div class="col-span-2">Variants</div>
+<div class="col-span-1 text-right">Actions</div>
+</div>
+<!-- Product Row 1 -->
+<div class="grid grid-cols-12 px-6 py-8 items-center bg-surface-container-lowest hover:bg-surface-bright transition-colors group">
+<div class="col-span-5 flex items-center gap-6">
+<div class="w-20 h-24 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Iron Pan" class="w-full h-full object-cover" data-alt="Close-up of a high-end black carbon steel frying pan with a minimalist wooden handle on a clean off-white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO3EiAVmBmXOcNdlz9zoeZn2xQwYDjye2vXkJ0trgu_HNSdM35x7c-2fZ3dSud_YHzl-RWV47d9MoFEqUwsoVlJZ-8q3_3v93sLyxHuW7PudNCqn5ros3ZlS9nJGbo3hXpJOwokKgnXHnRMYKHsP9IInhbSxqoLmkfNiJQyDXEak1jOX4kkFIJvGYLMrkt6z0ZQuxTPI1Cvqm8BZTz1QiClrI7stLCRMlHhzgu5u0_FE9tESKNo8NLWG0WCUglB4CboalDgNFSHSRq"/>
+</div>
+<div>
+<h3 class="text-xl text-on-surface">Heirloom Carbon Steel Pan</h3>
+<p class="text-xs text-outline font-body mt-1">SKU: LIO-CSP-1024</p>
+<div class="mt-2 flex gap-2">
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-tighter">PFOA-Free</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-tighter">Natural Oil Seasoned</span>
+</div>
+</div>
+</div>
+<div class="col-span-2">
+<span class="text-sm font-body text-on-surface-variant">Cookware</span>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-bold text-on-surface">42 Units</span>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 70%;"></div>
+</div>
+<span class="text-[10px] text-outline uppercase font-bold tracking-widest">Healthy</span>
+</div>
+</div>
+<div class="col-span-2">
+<span class="text-sm font-body text-on-surface-variant">3 Sizes (10", 12", 14")</span>
+</div>
+<div class="col-span-1 text-right">
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors">edit</button>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors ml-3">more_vert</button>
+</div>
+</div>
+<!-- Product Row 2 (Restock Alert) -->
+<div class="grid grid-cols-12 px-6 py-8 items-center bg-surface-container-lowest hover:bg-surface-bright transition-colors group">
+<div class="col-span-5 flex items-center gap-6">
+<div class="w-20 h-24 bg-surface-container rounded-lg overflow-hidden flex-shrink-0 relative">
+<img alt="Wooden Spoon" class="w-full h-full object-cover" data-alt="Macro photography of artisanal hand-carved walnut wood kitchen utensils with smooth matte finish and organic grain patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBijMhn0oj343BD2aYYaIWP93oX1LTM4JYCRkF4h4ODhtFp4IwKzg4t6R5wE0f2gakBsOe2xLZ-uhNRg9ZvCd-XoOCEbFqFRpacFEdCRriMa2PTZK3MG14YTwAOmjb6AEWBlSaozYBxV4pwbAtEkdnt7DtkJkkB7_9-zWGh7zILxLeL1YjSwYAf6Zg_z0mRxJcg6MVi11QSxZeP-S8sgkNVMeHAvJnvgyUPje-Omg5RIzig0aRO27W5a7qbBjC8nROVr1qggZC2jNmn"/>
+<div class="absolute inset-0 bg-error/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+</div>
+<div>
+<h3 class="text-xl text-on-surface">Signature Walnut Stirring Set</h3>
+<p class="text-xs text-outline font-body mt-1">SKU: LIO-WUT-8821</p>
+<div class="mt-2 flex gap-2">
+<span class="px-2 py-0.5 bg-error-container text-on-error-container rounded-full text-[10px] font-bold uppercase tracking-tighter">Low Stock</span>
+</div>
+</div>
+</div>
+<div class="col-span-2">
+<span class="text-sm font-body text-on-surface-variant">Tools</span>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-bold text-error">4 Units</span>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 15%;"></div>
+</div>
+<span class="text-[10px] text-error uppercase font-bold tracking-widest">Urgent Restock</span>
+</div>
+</div>
+<div class="col-span-2">
+<span class="text-sm font-body text-on-surface-variant">Single Variant</span>
+</div>
+<div class="col-span-1 text-right">
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors">edit</button>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors ml-3">more_vert</button>
+</div>
+</div>
+<!-- Product Row 3 -->
+<div class="grid grid-cols-12 px-6 py-8 items-center bg-surface-container-lowest hover:bg-surface-bright transition-colors group">
+<div class="col-span-5 flex items-center gap-6">
+<div class="w-20 h-24 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Linen Apron" class="w-full h-full object-cover" data-alt="Minimalist heavy linen kitchen apron in charcoal grey hanging on a brass peg against a textured plaster wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW2-fJmCbw3jGl-FOD-EpRn6qFTnuRcjcmMPbzaAKW8GWz-rQ4JLJxRo_SSlCNDA-U4U37adWl_QCn_fe9JUhxHwI_tuMyRP_kTSZV-HhkaNI9hrVJel6bM4Pq0ScUq6ASFt8Zk19F92Ky8yVv4Hc-2TUOug2tmMHft3VbdKN5B9xa1GaZxoH4FS8jh-d3tlwsGq0MwWuZjLHUhNoAEjs9OZppSOfU1cQUZMwzX432Qy9F9jQ27JjsIXlYMtUHbFtvuAaIP7xZoBB6"/>
+</div>
+<div>
+<h3 class="text-xl text-on-surface">Heavyweight French Linen Apron</h3>
+<p class="text-xs text-outline font-body mt-1">SKU: LIO-TX-009</p>
+<div class="mt-2 flex gap-2">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-tighter">Stone-Washed</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-tighter">Organic</span>
+</div>
+</div>
+</div>
+<div class="col-span-2">
+<span class="text-sm font-body text-on-surface-variant">Textiles</span>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-bold text-on-surface">128 Units</span>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 95%;"></div>
+</div>
+<span class="text-[10px] text-outline uppercase font-bold tracking-widest">In Stock</span>
+</div>
+</div>
+<div class="col-span-2">
+<span class="text-sm font-body text-on-surface-variant">4 Colors (Ash, Ochre, Olive, Clay)</span>
+</div>
+<div class="col-span-1 text-right">
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors">edit</button>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors ml-3">more_vert</button>
+</div>
+</div>
+</div>
+<!-- Pagination or Infinite Scroll Anchor -->
+<div class="mt-12 flex justify-between items-center py-6 border-t border-outline-variant/10">
+<span class="text-xs font-label uppercase tracking-widest text-outline">Showing 3 of 42 high-end artifacts</span>
+<div class="flex gap-4">
+<button class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Previous</button>
+<div class="flex gap-2">
+<span class="w-6 h-6 flex items-center justify-center bg-primary text-on-primary text-[10px] font-bold rounded-full">1</span>
+<span class="w-6 h-6 flex items-center justify-center text-[10px] font-bold rounded-full border border-outline-variant/30">2</span>
+<span class="w-6 h-6 flex items-center justify-center text-[10px] font-bold rounded-full border border-outline-variant/30">3</span>
+</div>
+<button class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Next</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Contextual FAB (Only for specific pages, here it stays for Restock shortcut) -->
+<div class="fixed bottom-8 right-8">
+<button class="bg-primary text-on-primary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</button>
+</div>
+</body></html>

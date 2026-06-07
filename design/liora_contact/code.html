@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#c5c8bd",
+              "primary-container": "#3a4a2f",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fedb98",
+              "background": "#fcf9f8",
+              "tertiary-fixed": "#e3e3de",
+              "tertiary": "#2e302d",
+              "on-surface-variant": "#444840",
+              "on-primary-fixed": "#111f08",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#5a430e",
+              "outline": "#75786f",
+              "on-primary-fixed-variant": "#3b4b30",
+              "surface-tint": "#536346",
+              "on-primary-container": "#a6b997",
+              "on-background": "#1c1b1b",
+              "on-tertiary-container": "#b3b4af",
+              "inverse-on-surface": "#f3f0ef",
+              "surface-bright": "#fcf9f8",
+              "primary": "#24331a",
+              "secondary-fixed": "#ffdf9f",
+              "primary-fixed-dim": "#bacda9",
+              "primary-fixed": "#d5e9c4",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#e3c281",
+              "surface-variant": "#e5e2e1",
+              "surface": "#fcf9f8",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#ebe7e7",
+              "on-tertiary-fixed": "#1a1c19",
+              "surface-container-highest": "#e5e2e1",
+              "surface-container-low": "#f6f3f2",
+              "on-tertiary-fixed-variant": "#454744",
+              "secondary": "#735b24",
+              "inverse-surface": "#313030",
+              "surface-container": "#f0edec",
+              "tertiary-container": "#444643",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-primary": "#bacda9",
+              "surface-dim": "#dcd9d9",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#261a00",
+              "on-secondary-container": "#785f28",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(252, 249, 248, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-headline tracking-widest uppercase text-emerald-950 dark:text-stone-100">
+                LIORA
+            </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300 font-serif italic tracking-tight" href="#">Collections</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300 font-serif italic tracking-tight" href="#">Our Story</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300 font-serif italic tracking-tight" href="#">Journal</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-stone-200 transition-colors duration-300 font-serif italic tracking-tight" href="#">Care</a>
+<a class="text-emerald-900 dark:text-stone-100 border-b border-emerald-900/20 font-serif italic tracking-tight" href="#">Contact Us</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-emerald-900 dark:text-emerald-500 hover:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section: Editorial Header -->
+<section class="px-12 max-w-[1440px] mx-auto mb-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-7">
+<span class="font-label text-[0.75rem] uppercase tracking-[0.1em] text-on-surface-variant block mb-4">Connect With Us</span>
+<h1 class="font-headline text-6xl md:text-8xl tracking-tight leading-[0.9] text-primary">
+                        Dialogue <br/> <span class="italic text-primary-fixed-dim">Enriches</span> the Craft.
+                    </h1>
+</div>
+<div class="md:col-span-5 pb-4">
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">
+                        Whether you seek guidance on our toxin-free materials or wish to discuss a bespoke editorial partnership, our studio is at your service.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Contact & Imagery Grid -->
+<section class="px-12 max-w-[1440px] mx-auto mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<!-- Form Column -->
+<div class="space-y-16">
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative">
+<label class="block font-label text-[0.65rem] uppercase tracking-widest text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full bg-surface-container-highest border-0 border-b border-primary focus:ring-0 px-0 py-3 text-on-background placeholder:text-outline-variant/50 transition-all" placeholder="Elias Thorne" type="text"/>
+</div>
+<div class="relative">
+<label class="block font-label text-[0.65rem] uppercase tracking-widest text-on-surface-variant mb-2">Email Address</label>
+<input class="w-full bg-surface-container-highest border-0 border-b border-primary focus:ring-0 px-0 py-3 text-on-background placeholder:text-outline-variant/50 transition-all" placeholder="elias@studio.com" type="email"/>
+</div>
+</div>
+<div class="relative">
+<label class="block font-label text-[0.65rem] uppercase tracking-widest text-on-surface-variant mb-2">Subject</label>
+<input class="w-full bg-surface-container-highest border-0 border-b border-primary focus:ring-0 px-0 py-3 text-on-background placeholder:text-outline-variant/50 transition-all" placeholder="Inquiry regarding The Heirloom Collection" type="text"/>
+</div>
+<div class="relative">
+<label class="block font-label text-[0.65rem] uppercase tracking-widest text-on-surface-variant mb-2">Message</label>
+<textarea class="w-full bg-surface-container-highest border-0 border-b border-primary focus:ring-0 px-0 py-3 text-on-background placeholder:text-outline-variant/50 transition-all resize-none" placeholder="How can we assist your culinary journey?" rows="4"></textarea>
+</div>
+<button class="group flex items-center justify-between w-full md:w-auto md:min-w-[240px] px-8 py-5 bg-primary text-on-primary rounded-xl hover:bg-primary-container transition-all duration-300" type="submit">
+<span class="font-label text-[0.75rem] uppercase tracking-widest">Send Inquiry</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+<div>
+<h4 class="font-headline italic text-xl mb-4">The Studio</h4>
+<p class="text-on-surface-variant leading-relaxed">
+                                422 Artisan Row<br/>
+                                Copenhagen, Denmark<br/>
+                                1250 DK
+                            </p>
+</div>
+<div>
+<h4 class="font-headline italic text-xl mb-4">Digital Press</h4>
+<p class="text-on-surface-variant leading-relaxed">
+                                studio@liora-editorial.com<br/>
+                                +45 22 89 14 00
+                            </p>
+</div>
+</div>
+</div>
+<!-- Visual Column: Asymmetric Layout -->
+<div class="relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low shadow-2xl">
+<img alt="Premium kitchen interior" class="w-full h-full object-cover" data-alt="Close-up of luxury minimalist kitchen with dark stone countertops, brass hardware, and a single olive green ceramic pot reflecting soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRuWNbaxvCx3aHwKIxWDc1kx8fm3mgQun29wWrRKjELbE5t8GlnUl1kzcUbdwMqv4n-HTfTVvGD0n1MR3ymwUV9VZ7YrU4bYPhGvmGX1Km5XwSFkq6_fGyhEkFXt5-iL1JzjSJ1E5s4Bz7-Gvqas2w-J2CcRMqee0snk0HU8ClPruZGfqhKzpTJL5zUaYalBnaAlIsUEWlp3poKeLeUiJ-aZmJeQz6VcSY-HSRnZ8RKqMFdAn2ScFy5O7IKPWcuSQkYsNNE4vGzUDK"/>
+</div>
+<!-- Overlapping Ingredient Chip/Badge -->
+<div class="absolute -bottom-10 -left-10 hidden lg:block bg-secondary-container p-10 rounded-xl max-w-xs shadow-xl">
+<span class="bg-primary text-on-primary px-3 py-1 rounded-full text-[0.6rem] uppercase tracking-tighter mb-4 inline-block">Heirloom Standard</span>
+<p class="font-headline text-lg leading-snug text-on-secondary-container italic">"Our cookware is designed to be passed down, not replaced. Every detail serves longevity."</p>
+</div>
+<div class="mt-20 aspect-square rounded-xl overflow-hidden bg-surface-container-low w-2/3 ml-auto shadow-xl">
+<img alt="Artisan kitchen tools" class="w-full h-full object-cover" data-alt="Macro photography of artisanal wooden cooking spoons and a linen tea towel on a textured stone surface with dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVu8qlhL1nI4pB3T-8mtHCel6FQWnAv0l0f3aXNwTVK3vy9o7HK4Nky7ExBVhTLWqZ5_q4CvyAp-_YjP6nSBpAf-BWvofqUrT4n4PYCiaOM5CqKizbLA51XlXgaQl2sMqxIl5vHGZTUhltI5mA7E1bi0fOgPZzZU75YMj411EN-mYIUtILrLt_jzDIVVPRzjiVI9QYXdZJTCL0ljLXpqyJyJbVrYCa3i0Kzgp4Dloe3egyg6RrZsGEU1hyx_qAK9gOnHCpKZRuO1zo"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section: Tonal Shift -->
+<section class="bg-surface-container py-32 px-12">
+<div class="max-w-[1440px] mx-auto">
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<h2 class="font-headline text-5xl tracking-tight text-primary">Global Presence</h2>
+<p class="text-on-surface-variant max-w-sm">From our Copenhagen flagship to boutiques in Tokyo and New York, LIORA is found where craftsmanship is celebrated.</p>
+</div>
+<div class="relative w-full h-[500px] rounded-xl overflow-hidden grayscale contrast-125 opacity-80 hover:opacity-100 transition-opacity duration-700">
+<div class="absolute inset-0 flex items-center justify-center bg-surface-container-highest">
+<!-- Placeholder for Map Visual with data-location -->
+<div class="text-center">
+<span class="material-symbols-outlined text-6xl text-primary/20 mb-4" data-icon="location_on">location_on</span>
+<p class="font-headline italic text-xl">Find a Stockist</p>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-30" data-alt="Abstract aerial view of European city streets at dusk with soft golden lights and deep shadows in a minimalist aesthetic" data-location="Copenhagen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNCS4k4Azf4ypI_2EVgxhdik5ebXLYFnz--HISuMHlI-s_vbAQBJGersNbHxezs2GFrPjo3_wJjLI-RBnLFp0kzbTFTlJAClOUlsA71paIeSbM7Xsip3xrRkXWAdZh-oXPhVEvKlRbn6oH-xgTlvKzcg-n5Lj87c6rfBQbH6mW8viJN7Id6uuwknAGwwZ_cr2WrfuNN2Xl0Sj9N4fTd8wHYujvMfkA9OT4H-qse9MoAKNmLYdkFQtn7nPgjVJQDK6UjGhK-AzioUR2"/>
+</div>
+</div>
+<!-- Map Pin Overlays -->
+<div class="absolute top-1/3 left-1/4 group cursor-pointer">
+<div class="w-3 h-3 bg-primary rounded-full relative">
+<div class="absolute inset-0 animate-ping bg-primary/40 rounded-full"></div>
+</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-surface p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-[0.65rem] uppercase tracking-widest">Flagship Copenhagen</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full pt-24 pb-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-12 max-w-[1440px] mx-auto">
+<div class="space-y-8">
+<div class="text-lg font-headline text-emerald-950 dark:text-stone-100">LIORA</div>
+<p class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 max-w-xs leading-loose">
+                    © 2024 LIORA Editorial. Conscious Craftsmanship. Designed for the discerning home.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col space-y-4">
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Shipping &amp; Returns</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-sans text-xs tracking-widest uppercase text-emerald-900 dark:text-stone-100 font-bold hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Contact Us</a>
+<a class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-stone-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Wholesale</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,12 @@
+{"users": [
+{
+  "localId": "EZBu84NlKkcLVesKntxurAxXrcx2",
+  "email": "admin@liorastore.in",
+  "emailVerified": false,
+  "passwordHash": "0CNrFTEavSHkt/RF9BVy2dNjERqv00DrSpr7Ih1vJDVRzolHEb2xBnR+3EnKHw6f0rbMth9xez243uwBT4Q/oA==",
+  "salt": "3yVwfUr8XMho6A==",
+  "lastSignedInAt": "1774456817567",
+  "createdAt": "1774454508753",
+  "disabled": false,
+  "providerUserInfo": []
+}]}

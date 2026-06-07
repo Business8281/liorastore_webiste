@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#24331a",
+              "error": "#ba1a1a",
+              "secondary": "#735b24",
+              "outline": "#75786f",
+              "tertiary-container": "#444643",
+              "on-primary-fixed": "#111f08",
+              "surface": "#fcf9f8",
+              "background": "#fcf9f8",
+              "primary-container": "#3a4a2f",
+              "surface-dim": "#dcd9d9",
+              "secondary-fixed-dim": "#e3c281",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f0edec",
+              "on-tertiary-container": "#b3b4af",
+              "surface-variant": "#e5e2e1",
+              "on-primary-container": "#a6b997",
+              "on-error": "#ffffff",
+              "inverse-surface": "#313030",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "tertiary": "#2e302d",
+              "on-tertiary-fixed-variant": "#454744",
+              "secondary-fixed": "#ffdf9f",
+              "on-tertiary-fixed": "#1a1c19",
+              "primary-fixed-dim": "#bacda9",
+              "on-secondary-container": "#785f28",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e5e2e1",
+              "secondary-container": "#fedb98",
+              "outline-variant": "#c5c8bd",
+              "on-secondary-fixed-variant": "#5a430e",
+              "on-surface-variant": "#444840",
+              "surface-tint": "#536346",
+              "surface-container-high": "#ebe7e7",
+              "on-surface": "#1c1b1b",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#d5e9c4",
+              "tertiary-fixed": "#e3e3de",
+              "surface-bright": "#fcf9f8",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary-fixed": "#261a00",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#bacda9",
+              "error-container": "#ffdad6",
+              "inverse-on-surface": "#f3f0ef",
+              "on-background": "#1c1b1b",
+              "on-primary-fixed-variant": "#3b4b30"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, .brand-font {
+        font-family: 'Newsreader', serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-stone-50 dark:bg-stone-950 flex flex-col py-6 space-y-2 z-40">
+<div class="px-6 mb-8">
+<h1 class="text-xl font-serif font-bold text-stone-900 dark:text-stone-100">LIORA Admin</h1>
+<p class="font-sans font-medium text-sm tracking-wide text-stone-500 dark:text-stone-400">Editorial Control</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Overview -->
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Inventory -->
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Inventory</span>
+</a>
+<!-- Orders (ACTIVE) -->
+<a class="bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100 rounded-lg mx-2 px-4 py-3 font-bold flex items-center gap-3 font-sans text-sm tracking-wide hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span>Orders</span>
+</a>
+<!-- Customers -->
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Customers</span>
+</a>
+<!-- Analytics -->
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Analytics</span>
+</a>
+<!-- Settings -->
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg transition-all flex items-center gap-3 font-sans font-medium text-sm tracking-wide hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<div class="p-4 bg-surface-container rounded-xl mb-4">
+<div class="flex items-center gap-3 mb-3">
+<img alt="Admin User Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Professional headshot of a curator with refined features, soft studio lighting, high-end editorial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtJL_lnu2EGbgUh0AngFTio-xZT8a2OzhQIekXDSAZ0WB9uElDssETD1OUIJ1iOay2G5FNZq6M9ml6F2C9VOndqQw5l2TCazVJG90wtjF2Eau2HKOsFzOduBOe-L7jLubT45ASa3mRyBa6OpHLqEO3-_CglhJv8YeHdjWZ9uH4rJ1iZ_JBZQDfOiLFojBok1XsUCAXOif8D16ylo-ktSW4mfrh9CnyP5nWtNbsfRQfEA6XpSVUYMsjJHQhKHz5IUZ9c7ULINrr2-hH"/>
+<div>
+<p class="text-xs font-bold text-on-surface">Elena Vance</p>
+<p class="text-[10px] uppercase tracking-tighter text-outline">Lead Curator</p>
+</div>
+</div>
+<button class="w-full py-2 bg-primary text-on-primary text-xs rounded-lg hover:opacity-90 transition-opacity">
+                    View Storefront
+                </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen p-12">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-16">
+<div class="max-w-2xl">
+<h2 class="text-5xl font-headline italic tracking-tight text-primary mb-4">Order Editorial</h2>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-lg">
+                    Manage the physical lifecycle of LIORA's curated tools. Precision in logistics reflects the precision of our craftsmanship.
+                </p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 border border-outline-variant/30 text-primary font-label text-xs uppercase tracking-widest rounded-xl hover:bg-surface-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                    Export Orders
+                </button>
+<button class="px-6 py-3 bg-primary text-on-primary font-label text-xs uppercase tracking-widest rounded-xl hover:opacity-95 shadow-lg transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                    Create Manual Order
+                </button>
+</div>
+</header>
+<!-- Search & Filter Bar (Tonal Depth) -->
+<div class="bg-surface-container-low p-6 rounded-2xl mb-8 flex flex-col md:flex-row gap-6 items-center justify-between">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border-none rounded-xl text-sm focus:ring-1 focus:ring-primary/20 placeholder:text-outline/50 font-body" placeholder="Search by customer, SKU, or destination..." type="text"/>
+</div>
+<div class="flex items-center gap-6 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto">
+<div class="flex gap-2">
+<span class="bg-primary text-on-primary px-4 py-1.5 rounded-full text-[10px] uppercase tracking-widest font-bold">All Orders</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-4 py-1.5 rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-surface-dim cursor-pointer transition-colors">Processing</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-4 py-1.5 rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-surface-dim cursor-pointer transition-colors">Shipped</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-4 py-1.5 rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-surface-dim cursor-pointer transition-colors">Delivered</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30 hidden md:block"></div>
+<button class="flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                    More Filters
+                </button>
+</div>
+</div>
+<!-- Orders Table (Bento Inspired Card) -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-8 py-6 text-[10px] uppercase tracking-[0.2em] font-bold text-outline">Order Reference</th>
+<th class="px-8 py-6 text-[10px] uppercase tracking-[0.2em] font-bold text-outline">Curated for</th>
+<th class="px-8 py-6 text-[10px] uppercase tracking-[0.2em] font-bold text-outline">Stewardship Status</th>
+<th class="px-8 py-6 text-[10px] uppercase tracking-[0.2em] font-bold text-outline">Value</th>
+<th class="px-8 py-6 text-[10px] uppercase tracking-[0.2em] font-bold text-outline text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Order 1 -->
+<tr class="hover:bg-surface-container/30 transition-colors group">
+<td class="px-8 py-6">
+<span class="font-headline font-bold text-lg text-primary">#LR-9012</span>
+<p class="text-[10px] text-outline mt-1 font-body">Placed Today, 10:42 AM</p>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-[10px]">
+                                    MJ
+                                </div>
+<div>
+<p class="text-sm font-bold text-on-surface font-body">Marcus Jurgensen</p>
+<p class="text-[10px] text-outline font-body">Copenhagen, DK</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-on-secondary-container animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-secondary-container">Processing</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-bold text-primary font-body">$842.00</p>
+<p class="text-[10px] text-outline font-body">3 curated items</p>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Order 2 -->
+<tr class="hover:bg-surface-container/30 transition-colors group">
+<td class="px-8 py-6">
+<span class="font-headline font-bold text-lg text-primary">#LR-8994</span>
+<p class="text-[10px] text-outline mt-1 font-body">Oct 24, 2024</p>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold text-[10px]">
+                                    SL
+                                </div>
+<div>
+<p class="text-sm font-bold text-on-surface font-body">Sienna Loft</p>
+<p class="text-[10px] text-outline font-body">New York, US</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">Shipped</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-bold text-primary font-body">$1,290.50</p>
+<p class="text-[10px] text-outline font-body">Cast Iron Series</p>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Order 3 -->
+<tr class="hover:bg-surface-container/30 transition-colors group">
+<td class="px-8 py-6">
+<span class="font-headline font-bold text-lg text-primary">#LR-8871</span>
+<p class="text-[10px] text-outline mt-1 font-body">Oct 22, 2024</p>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline font-bold text-[10px]">
+                                    HK
+                                </div>
+<div>
+<p class="text-sm font-bold text-on-surface font-body">Hiroki Kato</p>
+<p class="text-[10px] text-outline font-body">Tokyo, JP</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary text-on-primary rounded-full">
+<span class="material-symbols-outlined text-[10px]" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Delivered</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-bold text-primary font-body">$315.00</p>
+<p class="text-[10px] text-outline font-body">Artisan Knife Kit</p>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Order 4 -->
+<tr class="hover:bg-surface-container/30 transition-colors group">
+<td class="px-8 py-6">
+<span class="font-headline font-bold text-lg text-primary">#LR-8865</span>
+<p class="text-[10px] text-outline mt-1 font-body">Oct 21, 2024</p>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-[10px]">
+                                    AW
+                                </div>
+<div>
+<p class="text-sm font-bold text-on-surface font-body">Amara Williams</p>
+<p class="text-[10px] text-outline font-body">London, UK</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary text-on-primary rounded-full">
+<span class="material-symbols-outlined text-[10px]" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Delivered</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-bold text-primary font-body">$2,100.00</p>
+<p class="text-[10px] text-outline font-body">Full Editorial Set</p>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination (Floating-like Footer) -->
+<div class="px-8 py-6 bg-surface-container-low flex justify-between items-center">
+<p class="text-[10px] uppercase tracking-widest text-outline font-bold">Showing 1 to 4 of 1,284 Curations</p>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 rounded-lg hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-on-primary rounded-lg">
+<span class="text-xs font-bold">1</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 rounded-lg hover:bg-surface-container-highest transition-colors">
+<span class="text-xs font-bold text-primary">2</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 rounded-lg hover:bg-surface-container-highest transition-colors">
+<span class="text-xs font-bold text-primary">3</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 rounded-lg hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Metric Bento Section -->
+<section class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-primary text-on-primary p-8 rounded-3xl relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-[10px] uppercase tracking-[0.3em] opacity-60 font-bold mb-2">Total Monthly Flow</p>
+<h3 class="text-4xl font-headline tracking-tight mb-4">$124,502.00</h3>
+<div class="flex items-center gap-2 text-primary-fixed">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span class="text-xs font-bold tracking-widest">+12.4% vs Last Month</span>
+</div>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[160px]" data-icon="payments">payments</span>
+</div>
+</div>
+<div class="bg-surface-container p-8 rounded-3xl border border-transparent hover:border-outline-variant/20 transition-all">
+<p class="text-[10px] uppercase tracking-[0.3em] text-outline font-bold mb-2">Stewardship Rate</p>
+<h3 class="text-4xl font-headline tracking-tight mb-4 text-primary">99.8%</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Orders delivered without toxin-free compliance issues.</p>
+<div class="mt-6 h-1 w-full bg-surface-dim rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[99.8%]"></div>
+</div>
+</div>
+<div class="bg-secondary-container p-8 rounded-3xl border border-transparent hover:border-on-secondary-container/10 transition-all">
+<p class="text-[10px] uppercase tracking-[0.3em] text-on-secondary-container font-bold mb-2">New Enthusiasts</p>
+<h3 class="text-4xl font-headline tracking-tight mb-4 text-on-secondary-container">482</h3>
+<p class="text-xs text-on-secondary-container/80 leading-relaxed">Unique customers joined the LIORA editorial this week.</p>
+<div class="mt-6 flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-secondary-container" data-alt="Female profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBegHO5tOkugqr_AKEDxUgCZX8D0XLhosTlH2KDlY6cVp4MmNJMSZDZSg8rXLXbwTYqsR7ZrY0a2vniRrZ4hdDjikW-b4x6k8Cwbv8B0NF6Mqgs4FE90eRleO4dVQtPhONk8UwbtxNVjgJ_oeppue8UOKHzC25cDhW_u_Aq6s-qxnZaetXVO2VQO5CTp845XIxPciIMiHBWnHVxF30wREBiFynB1W-BgBlLH-gJlBjRHdkCYkpMqTXHnfpzsVMp5qNRD-7RVc1o7qDs"/>
+<img class="w-8 h-8 rounded-full border-2 border-secondary-container" data-alt="Male profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMmLInmG9YUXme5e3qhMnK1mG2IfkKesJzG1zv_WzRj2-Qr-t2UWfT0M49VKx2oNUlZ1JXT-VYB1190bzsZWSHDuDG6gQbxi-uFnGW2aJgJXy6sewCQO8ShjFzNsd0reVaamYsagm_qlNdprkjaULXOV77TuCFCot1hfAGwR_xggjJZSochKJCgRoFKiSUdlG7-BaOXh2TmiF_EdW8FjdpptoWslLogJrP6KmlBo9awrpoyP-nA4DPmxiVurQDANwbZT0DsLa5-90V"/>
+<img class="w-8 h-8 rounded-full border-2 border-secondary-container" data-alt="Male profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO7Ve45gTQhIT30TJTrP3Wlm1R_r3aK6qQc7SsyQqj2I3iJ8e4C7VsZFgEzuhg1RRgQCHvdQumKixbNZiT0ovTmXCJwDHg99BATTa6v8yS0U9_bcLyN-nMzP2TID3cuQ0A--a0UqUuTqDFFZnRGTRaVPcKaON3GwbL_9AP0rcAAehqWZW3ZabqxY5Km2r7iy64GsVR2Qw2ah38SfFkkNUztexi5SFzaYXX9cTnaqUfR7w_15AEFH1e0tgKmbQLzT8iSKg5MiJVNn0"/>
+<div class="w-8 h-8 rounded-full border-2 border-secondary-container bg-on-secondary-container text-secondary-container text-[10px] font-bold flex items-center justify-center">+479</div>
+</div>
+</div>
+</section>
+<!-- Ingredient Chip Style Legend -->
+<div class="mt-20 flex flex-wrap gap-4 items-center">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-outline mr-4">Compliance Filters:</span>
+<div class="bg-secondary-container px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wider text-on-secondary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified">verified</span>
+                PFOA-Free Packaging
+            </div>
+<div class="bg-secondary-container px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wider text-on-secondary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]" data-icon="eco">eco</span>
+                Carbon Neutral Logistics
+            </div>
+<div class="bg-secondary-container px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wider text-on-secondary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]" data-icon="water_drop">water_drop</span>
+                Plastic-Free Tape
+            </div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="ml-64 bg-stone-100 dark:bg-stone-900 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-sans text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400">
+            © 2024 LIORA Culinary Editorial. Toxin-Free Living.
+        </p>
+<div class="flex gap-8">
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-opacity opacity-70" href="#">Privacy Policy</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-opacity opacity-70" href="#">Terms of Service</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-opacity opacity-70" href="#">Wholesale</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-opacity opacity-70" href="#">Contact</a>
+</div>
+</footer>
+</body></html>

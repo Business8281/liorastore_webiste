@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LIORA | Premium Collections</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#fedb98",
+              "primary-fixed-dim": "#bacda9",
+              "surface-container-low": "#f6f3f2",
+              "background": "#fcf9f8",
+              "inverse-surface": "#313030",
+              "surface": "#fcf9f8",
+              "on-primary-fixed": "#111f08",
+              "on-tertiary-container": "#b3b4af",
+              "surface-container": "#f0edec",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "secondary-fixed-dim": "#e3c281",
+              "on-surface": "#1c1b1b",
+              "surface-container-high": "#ebe7e7",
+              "on-surface-variant": "#444840",
+              "secondary-fixed": "#ffdf9f",
+              "surface-container-highest": "#e5e2e1",
+              "inverse-primary": "#bacda9",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed": "#261a00",
+              "primary": "#24331a",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#dcd9d9",
+              "on-error-container": "#93000a",
+              "tertiary": "#2e302d",
+              "surface-tint": "#536346",
+              "outline-variant": "#c5c8bd",
+              "on-tertiary-fixed-variant": "#454744",
+              "tertiary-container": "#444643",
+              "primary-container": "#3a4a2f",
+              "surface-bright": "#fcf9f8",
+              "on-primary-fixed-variant": "#3b4b30",
+              "on-secondary-container": "#785f28",
+              "error": "#ba1a1a",
+              "surface-variant": "#e5e2e1",
+              "on-tertiary": "#ffffff",
+              "outline": "#75786f",
+              "on-secondary-fixed-variant": "#5a430e",
+              "tertiary-fixed": "#e3e3de",
+              "primary-fixed": "#d5e9c4",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-container": "#a6b997",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#1a1c19",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "on-background": "#1c1b1b",
+              "secondary": "#735b24"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="max-w-[1440px] mx-auto flex justify-between items-center px-8 py-4">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-bold tracking-tighter text-[#3A4A2F] dark:text-[#fedb98] font-headline" href="#">LIORA</a>
+<nav class="hidden md:flex items-center gap-8 font-headline italic tracking-tight">
+<a class="text-[#3A4A2F] dark:text-[#fedb98] font-semibold border-b-2 border-[#3A4A2F]" href="#">Shop</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 hover:opacity-80 transition-opacity duration-300" href="#">Our Story</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 hover:opacity-80 transition-opacity duration-300" href="#">Benefits</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center text-stone-900 dark:text-stone-100 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="flex items-center text-stone-900 dark:text-stone-100 hover:opacity-80 transition-opacity duration-300 relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-[8px] text-white rounded-full w-3.5 h-3.5 flex items-center justify-center">2</span>
+</button>
+<button class="flex items-center text-stone-900 dark:text-stone-100 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 max-w-[1440px] mx-auto px-8">
+<!-- Header Section -->
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="space-y-4">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-secondary">The Curator's Choice</span>
+<h1 class="text-5xl md:text-7xl font-headline font-bold tracking-tighter text-primary">Premium Collections</h1>
+<p class="max-w-xl text-on-surface-variant text-lg leading-relaxed">
+                    Thoughtfully designed, toxin-free culinary tools crafted for those who view cooking as an art form.
+                </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container rounded-lg font-label text-sm uppercase tracking-wider hover:bg-surface-container-high transition-colors">
+                        Sort By: Popular
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<!-- Mock Dropdown -->
+<div class="absolute right-0 top-full mt-2 w-48 bg-surface-container-lowest shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10 p-2">
+<a class="block px-4 py-2 text-sm hover:bg-surface-container rounded-lg" href="#">Popular</a>
+<a class="block px-4 py-2 text-sm hover:bg-surface-container rounded-lg" href="#">Price Low-High</a>
+<a class="block px-4 py-2 text-sm hover:bg-surface-container rounded-lg" href="#">Newest First</a>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0 space-y-12">
+<div class="space-y-6">
+<h3 class="font-label text-xs uppercase tracking-[0.15em] font-bold border-b border-outline-variant/20 pb-4">Filter By Material</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-body text-on-surface-variant group-hover:text-primary transition-colors">Obsidian Ceramic</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-body text-on-surface-variant group-hover:text-primary transition-colors">Brushed Copper</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-body text-primary font-semibold">Virgin Terracotta</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-body text-on-surface-variant group-hover:text-primary transition-colors">Sustainably Sourced Ash</span>
+</label>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="font-label text-xs uppercase tracking-[0.15em] font-bold border-b border-outline-variant/20 pb-4">Price Range</h3>
+<div class="space-y-4">
+<div class="h-1 bg-surface-container rounded-full relative">
+<div class="absolute left-1/4 right-1/4 h-full bg-primary rounded-full"></div>
+<div class="absolute left-1/4 -top-1.5 w-4 h-4 bg-primary-container border-2 border-white rounded-full shadow-md"></div>
+<div class="absolute right-1/4 -top-1.5 w-4 h-4 bg-primary-container border-2 border-white rounded-full shadow-md"></div>
+</div>
+<div class="flex justify-between text-xs font-label text-on-surface-variant">
+<span>$50</span>
+<span>$2,500</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="font-label text-xs uppercase tracking-[0.15em] font-bold border-b border-outline-variant/20 pb-4">Tool Type</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-xs font-label hover:bg-primary hover:text-white transition-all">Cookware</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-xs font-label hover:bg-primary hover:text-white transition-all">Knives</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-xs font-label hover:bg-primary hover:text-white transition-all">Textiles</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-xs font-label hover:bg-primary hover:text-white transition-all">Serving</button>
+</div>
+</div>
+<div class="pt-8">
+<button class="w-full py-4 text-xs font-label uppercase tracking-widest text-on-surface hover:underline transition-all">Clear All Filters</button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Product Card 1 -->
+<div class="group relative space-y-6">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container relative">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-wider">Editor's Choice</span>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of a handcrafted obsidian black ceramic dutch oven on a minimalist stone surface with dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Q2bhdXhleYAo4Sm2qlT1s6T8htUe1Gx1kpUk1VRThSlBQ8-9cJRf5RAABdQRYX8hBrC2JBzmp9hTtoRqSlNYRk-VB2bhgYLC9z1NjUuaiVksQAaEP_EmJyFS107W4yM58NVFjct3omJ6BUZsBTjOy_schBeio6kNm6WZ_FmhnT7NR5N-fZ1pQNm96Og6XJ0PXM_Lo2B1ZihEzvcS4bClsC0VF5k9C97R2v0iF4nvKYxeNOcFlaLzAQiQAlWqrcgUM9sVwHqYMUPo"/>
+<!-- Add to Cart Overlay -->
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-headline font-semibold text-primary">Obsidian Dutch Oven</h3>
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider">7.5 Quart • Cast Iron</p>
+<div class="flex items-baseline gap-3 pt-2">
+<span class="text-lg font-body font-semibold text-on-surface">$385.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative space-y-6">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container relative">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-primary text-white rounded-full text-[10px] font-bold uppercase tracking-wider">New Arrival</span>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="artisanal copper sauté pan with polished brass handle sitting on a rustic wooden table with soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAis-YZIfqDmP8uj1PWHtvaNXsU8Nslhoco3F7qSk4WWesDtOIfdsSyV7NeVpd0OWrIl2IlTr4I782Y6QO-VGHRa5j--Q1taCJVpe__dDFls-tPYTLO9vIGIKnxWQ4I7rD94Tarn_a9f23J5uHdwgYm_eOzeNtEH6jPyioDyrC8k01wuZZP7GE-0COi4Jrw_hs7emXm7QaEs2mEYbCmuw3j4rkat-az5IbDi7pq43BJfanBE6GLQz4bJgqH0IFmtOMZJULkjvYGijPs"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-headline font-semibold text-primary">Brushed Copper Skillet</h3>
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider">12-Inch • Professional Grade</p>
+<div class="flex items-baseline gap-3 pt-2">
+<span class="text-lg font-body font-semibold text-on-surface">$295.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative space-y-6">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container relative">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-surface-container-highest text-on-surface rounded-full text-[10px] font-bold uppercase tracking-wider">Low Stock</span>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="set of three organic terracotta mixing bowls stacked neatly in a sun-drenched airy modern kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGJrIz2e1npRHNfDPlPad6KOvCPvPjas3YWMtwjMfRP0aVCIh3qTcCzibs9U3dgg2pKo-UewGfKZrPHjBRXvqzYTBUlwh9aHKnNwUebqVP_STD6X5Trf0WgCqqoDbCMAXvoxedN-pb_dZRgYGdEmbO3f5MsMU7fSQU9HGA2nwhfVH6OasCDqZLeJQdORudezo3AEdh_qmUit6Yulncde8EPL2qTjRUHAnvDtS38BZY-0qxD_MgCIGY_9r_7bN3r-Xgj3O7qwJPGqY6"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-headline font-semibold text-primary">Terracotta Nesting Bowls</h3>
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider">Set of 3 • Natural Clay</p>
+<div class="flex items-baseline gap-3 pt-2">
+<span class="text-lg font-body font-semibold text-on-surface">$145.00</span>
+<span class="text-sm font-body text-on-surface-variant line-through">$180.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative space-y-6">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="professional chef's knife with a handle made of dark walnut wood resting on a sleek slate cutting board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7avXfIJ_Xqo3ZyUaP3MMdiI10ChB3ZLO0NnVTxAUjcsZtzGAUNClckggppKQ7GnT5X7J-wtBFnJa5bEuuH1P56xOfE_4KPcQxyiJ0QSAGlgeKlP3trMdYrIAGWcQCVRY01WV7Vci3BMp8zlF64a7vunBLV4Yn2oVS2KhK_TI8Q7C__q3Z4wYNGlrrCg9uG2biVUxxpHx_uBBneuwgW7GCw1GAvE6JA3hXI0GhKQ86swgRM_j-MhPp8LLpvrvizrbuO-oImN-zzWnT"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-headline font-semibold text-primary">Signature Chef's Knife</h3>
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider">8-Inch • Damascus Steel</p>
+<div class="flex items-baseline gap-3 pt-2">
+<span class="text-lg font-body font-semibold text-on-surface">$540.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative space-y-6">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container relative">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-wider">Best Seller</span>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="set of elegant minimalist glass salt and pepper grinders with light wood tops on a marble kitchen island" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB93UkkFGTzXdhmF9yefs_2DlkyhgKVFN-hpLAJzcF-BDlmeQXLQ_qPLqt-YGvFTVusq7Wk2OefrRbd3FN7j5cjmbCd4lZokc7BE-S8W3xcphqDDVgjd8wabntU2DocrzyWWxf-mgvHbNytfUD_BF8mltpKswz37BQ1ytSqhj5KMsHq7oQY_hJhKegBidZSEceRB0fLeb-AFNhRGR5euYFWlPWIKaU3b2LXgozBRyWaOKbn9t8vrt5u62KKYb6WrmD6kQK9wD8F4iKg"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-headline font-semibold text-primary">Ash Mill Grinders</h3>
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider">Set of 2 • Borosilicate Glass</p>
+<div class="flex items-baseline gap-3 pt-2">
+<span class="text-lg font-body font-semibold text-on-surface">$120.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative space-y-6">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="luxury thick white cotton apron with thin charcoal grey stripes hanging on a brass hook in a kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhAbO_PKiXhDLcS5woErcbENH2WZqvDomVVfPG6N_OXdMunL9xcpnqkMRHhU1hb2FiToGNZq7xnhahaK4QTDmZ-jDDIiGAGJzqo7lhjiQzmOesHbgIJmvrBMCehElV4HjPJdjA6gKQO6QYEjCTCDLeJgfuo821kNcuj1i6OrYrX5NNDUlm_AzR4XimOi4EE9PBp5zvTmTNHc7taL5KMjHf-HS1n21VFEh3aeH-I9CYXesIsdtlnR5zgi-wDxhFrUlg4_7HOk2CfsQB"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-headline font-semibold text-primary">Linen Atelier Apron</h3>
+<p class="font-label text-xs uppercase text-on-surface-variant tracking-wider">One Size • Toxin-Free Cotton</p>
+<div class="flex items-baseline gap-3 pt-2">
+<span class="text-lg font-body font-semibold text-on-surface">$85.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-24 border-t border-outline-variant/20 pt-12 flex items-center justify-between">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Showing 6 of 42 Items</span>
+<div class="flex gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-label text-xs">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 hover:bg-surface-container transition-all font-label text-xs">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 hover:bg-surface-container transition-all font-label text-xs">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full pt-20 pb-10">
+<div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-2">
+<span class="font-headline text-3xl mb-8 block text-[#3A4A2F]">LIORA</span>
+<p class="font-body text-sm text-stone-500 max-w-sm normal-case mb-8 leading-loose tracking-normal">
+                    Curating a cleaner culinary lifestyle through intentional design and uncompromising material integrity. Join our journey toward a toxin-free kitchen.
+                </p>
+<p class="font-label text-xs uppercase tracking-[0.1em] text-stone-500">© 2024 LIORA. Toxin-Free Culinary Excellence.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">Collections</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-label text-xs uppercase tracking-[0.1em] text-stone-500 hover:text-[#3A4A2F] transition-colors" href="#">Shop All</a>
+<a class="font-label text-xs uppercase tracking-[0.1em] text-stone-500 hover:text-[#3A4A2F] transition-colors" href="#">Cookware</a>
+<a class="font-label text-xs uppercase tracking-[0.1em] text-stone-500 hover:text-[#3A4A2F] transition-colors" href="#">The Knife Collection</a>
+<a class="font-label text-xs uppercase tracking-[0.1em] text-stone-500 hover:text-[#3A4A2F] transition-colors" href="#">New Arrivals</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">Support</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-label text-xs uppercase tracking-[0.1em] text-stone-500 hover:text-[#3A4A2F] transition-colors" href="#">Sustainability</a>
+<a class="font-label text-xs uppercase tracking-[0.1em] text-stone-500 hover:text-[#3A4A2F] transition-colors" href="#">Shipping</a>
+<a class="font-label text-xs uppercase tracking-[0.1em] text-stone-500 hover:text-[#3A4A2F] transition-colors" href="#">Returns</a>
+<a class="font-label text-xs uppercase tracking-[0.1em] text-stone-500 hover:text-[#3A4A2F] transition-colors" href="#">Privacy Policy</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>

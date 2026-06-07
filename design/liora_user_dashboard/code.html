@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LIORA | My Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#444643",
+                        "primary-fixed": "#d5e9c4",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-fixed-dim": "#e3c281",
+                        "secondary-fixed": "#ffdf9f",
+                        "primary": "#24331a",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e3e3de",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-container": "#fedb98",
+                        "surface": "#fcf9f8",
+                        "on-primary-fixed": "#111f08",
+                        "on-surface-variant": "#444840",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "error": "#ba1a1a",
+                        "tertiary": "#2e302d",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "inverse-surface": "#313030",
+                        "secondary": "#735b24",
+                        "outline-variant": "#c5c8bd",
+                        "on-secondary-container": "#785f28",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#3a4a2f",
+                        "on-tertiary-container": "#b3b4af",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#ebe7e7",
+                        "surface-container": "#f0edec",
+                        "primary-fixed-dim": "#bacda9",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#5a430e",
+                        "surface-tint": "#536346",
+                        "background": "#fcf9f8",
+                        "on-surface": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c6c7c2",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-primary": "#bacda9",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-container": "#a6b997",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "on-primary-fixed-variant": "#3b4b30",
+                        "outline": "#75786f",
+                        "on-background": "#1c1b1b"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-italic { font-family: 'Newsreader'; font-style: italic; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #c5c8bd; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 font-serif">LIORA</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Collections</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Our Story</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Journal</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Care</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-80 transition-opacity"><span class="material-symbols-outlined text-stone-900 dark:text-stone-100" data-icon="shopping_cart">shopping_cart</span></button>
+<button class="text-stone-900 dark:text-stone-100 border-b border-stone-900 dark:border-stone-100 pb-1"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-6 max-w-[1440px] mx-auto min-h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+<!-- Left Sidebar Navigation (Profile Overview) -->
+<aside class="lg:col-span-3">
+<div class="mb-12">
+<h1 class="font-headline text-4xl mb-2 text-primary">Elena Rossi</h1>
+<p class="text-stone-500 font-label uppercase tracking-widest text-xs">Member since Oct 2023</p>
+</div>
+<nav class="flex flex-col space-y-4">
+<a class="flex items-center gap-4 text-stone-900 font-bold border-l-2 border-stone-900 pl-4 py-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+<span class="text-sm tracking-wide">Account Overview</span>
+</a>
+<a class="flex items-center gap-4 text-stone-400 hover:text-stone-900 transition-colors pl-4 py-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-sm tracking-wide">Orders</span>
+</a>
+<a class="flex items-center gap-4 text-stone-400 hover:text-stone-900 transition-colors pl-4 py-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span>
+<span class="text-sm tracking-wide">Wishlist</span>
+</a>
+<a class="flex items-center gap-4 text-stone-400 hover:text-stone-900 transition-colors pl-4 py-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="home_pin">home_pin</span>
+<span class="text-sm tracking-wide">Addresses</span>
+</a>
+<a class="flex items-center gap-4 text-stone-400 hover:text-stone-900 transition-colors pl-4 py-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+<span class="text-sm tracking-wide">Logout</span>
+</a>
+</nav>
+<!-- Loyalty / Editorial Card -->
+<div class="mt-20 p-8 bg-surface-container rounded-xl">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-secondary-container bg-secondary-container px-2 py-1 rounded-full mb-4 inline-block">Pro-Chef Circle</span>
+<h3 class="font-headline text-xl mb-4 italic">Exclusive access to the Copper Series Masterclass.</h3>
+<button class="text-xs font-bold uppercase tracking-widest border-b border-primary pb-1 hover:opacity-70 transition-opacity">Explore Editorial</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<div class="lg:col-span-9 space-y-16">
+<!-- Order Tracking Progress Bar -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline text-3xl text-primary">Active Order</h2>
+<p class="text-stone-500 text-sm italic serif-italic">Your Obsidian Skillet is on its way.</p>
+</div>
+<span class="text-xs font-label uppercase tracking-widest text-primary">ETA: Tomorrow</span>
+</div>
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm">
+<div class="flex justify-between items-center mb-10 relative">
+<!-- Progress Line -->
+<div class="absolute top-1/2 left-0 w-full h-px bg-stone-200 -translate-y-1/2 z-0"></div>
+<div class="absolute top-1/2 left-0 w-2/3 h-[2px] bg-primary -translate-y-1/2 z-0"></div>
+<!-- Steps -->
+<div class="relative z-10 flex flex-col items-center gap-3">
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-surface-container-lowest"></div>
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Confirmed</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-3">
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-surface-container-lowest"></div>
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Processing</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-3">
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-surface-container-lowest"></div>
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">In Transit</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-3">
+<div class="w-4 h-4 rounded-full bg-stone-200 border-4 border-surface-container-lowest"></div>
+<span class="text-[10px] font-label uppercase tracking-widest text-stone-400">Delivered</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-xs text-stone-500">
+<p>Shipment ID: <span class="text-primary font-medium">LR-99281-CU</span></p>
+<a class="underline hover:text-primary transition-colors" href="#">Full Tracking Details</a>
+</div>
+</div>
+</section>
+<!-- Order History List -->
+<section>
+<div class="mb-8">
+<h2 class="font-headline text-3xl text-primary">Order History</h2>
+</div>
+<div class="space-y-4">
+<!-- History Item 1 -->
+<div class="group bg-surface-container-low p-6 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 bg-stone-200 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Culinary Tool" class="w-full h-full object-cover grayscale" data-alt="minimalist close-up of a high-end black iron skillet on a clean white kitchen surface with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApuAAm-AqVDvcPnb99YhKu0jPqEIviy3iaVf14w8JcgstSkhLle8hbthsQLny73XZBfK92xrmdej6mbs0tJ-dBOOP_ZQ5ZNLjDchCCPFQDPBbr9PMZM3hmNGmZJD5_03yDnTr_wsomyoyUJ9wvg8fFWcOapqnNhQqeGDQjWYDtfPCitLZoxxKvMqBGS4dC1r0kIUtkTurqaDJaVLlU4ysrIDfCEEMXkS6xjhMlwQfQIVNhcuAWc8HLBaLyeHRFXxc_VChLEGg30pUM"/>
+</div>
+<div>
+<p class="font-bold text-sm tracking-tight">The Heirloom Dutch Oven</p>
+<p class="text-xs text-stone-500 mt-1">Order #22841 • Jan 12, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-8 w-full md:w-auto justify-between md:justify-end">
+<span class="px-3 py-1 bg-primary text-on-primary text-[10px] font-label uppercase tracking-widest rounded-full">Delivered</span>
+<p class="font-bold text-sm">$320.00</p>
+<button class="material-symbols-outlined text-stone-400 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</button>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="group bg-surface-container-low p-6 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 bg-stone-200 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Kitchen Essential" class="w-full h-full object-cover grayscale" data-alt="professional photo of an artisan wooden chopping board with textured grain on a muted beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxN9HrI0PqDtXLC5RJF3eMNhhCGeE5Ihi3KcBz-ggc8vdWqDTKZ5scRPlSexr9C3M-UxuW19mnbXezCVXGen5dAvgwPaH5IRgGHWst_AWanmFK-tSnt4InagCmItB5UCjC0KxQUUHGNmIGTZ79-TloOh6CIinPaNXojVVvQ46MxsJUDNWtGEMIfHhl0CY8TJtmehYnDBlKWj3F_l52PNjgNvs_Tfkkr61BHexB3iwHPMdbvjw0ADGmZp2xZlmkGZji1N8tmgnYhB6p"/>
+</div>
+<div>
+<p class="font-bold text-sm tracking-tight">Artisan Walnut Board</p>
+<p class="text-xs text-stone-500 mt-1">Order #22510 • Nov 04, 2023</p>
+</div>
+</div>
+<div class="flex items-center gap-8 w-full md:w-auto justify-between md:justify-end">
+<span class="px-3 py-1 bg-stone-200 text-stone-600 text-[10px] font-label uppercase tracking-widest rounded-full">Delivered</span>
+<p class="font-bold text-sm">$145.00</p>
+<button class="material-symbols-outlined text-stone-400 group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Addresses (Asymmetric Bento) -->
+<section>
+<div class="mb-8">
+<h2 class="font-headline text-3xl text-primary">Saved Addresses</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-b-2 border-primary">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<button class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Edit</button>
+</div>
+<p class="font-bold text-sm mb-2">Home (Primary)</p>
+<p class="text-sm text-stone-500 leading-relaxed">742 Evergreen Terrace<br/>Springfield, IL 62704<br/>United States</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-stone-300" data-icon="business">business</span>
+<button class="text-[10px] font-label uppercase tracking-widest text-stone-400">Edit</button>
+</div>
+<p class="font-bold text-sm mb-2">Office</p>
+<p class="text-sm text-stone-500 leading-relaxed">420 Editorial Way, Suite 4<br/>Chicago, IL 60601<br/>United States</p>
+</div>
+</div>
+</section>
+<!-- Wishlist Grid -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline text-3xl text-primary">The Wishlist</h2>
+<a class="text-xs font-label uppercase tracking-widest underline decoration-stone-200 underline-offset-4 hover:decoration-primary transition-all" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group">
+<div class="aspect-[4/5] bg-stone-100 rounded-xl overflow-hidden mb-4 relative">
+<img alt="Kitchen Ware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="artistic macro shot of ceramic artisan plates stacked beautifully with warm earthy tones and soft natural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOANhkr5VFTw2FQwxeItLpXYLXtNNfkm3CJ4iF3PpVF8_0f7Od-MksUitYdF1a1qhh_RVqa__GJr5DuC0T-DwmeF5GXQIZlhGsFmDqZirPHjmllJmnIrcCtnoZoRHeNQZ4Np_bOnIVtJT-m5UWGx5LkfGwhlpnoZu50vDDwNL_zHrOhO5WLQ1PnI-Xw9GCEsZ7UqoP2bHxiLSDCvBq9Gki-P5uRdKYC0WqkEBCoM6f50P9iT6ALsLSbLUnMuh23UD2sfZUfoFQYkc8"/>
+<button class="absolute top-4 right-4 p-2 bg-white/50 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+<p class="font-bold text-xs tracking-tight uppercase">Bone China Service Set</p>
+<p class="text-xs text-stone-500 mt-1">$480.00</p>
+</div>
+<!-- Product Card 2 -->
+<div class="group">
+<div class="aspect-[4/5] bg-stone-100 rounded-xl overflow-hidden mb-4 relative">
+<img alt="Premium Pot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="luxury copper cooking pot with elegant handles reflecting soft studio light on a clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1806OvA5rTBrWJGGYWeGE4kSTHRBQ3owIWoSOyHb57NEn843MDMt1zbdmPmuhfeIYSXp2pGyKzuX9ZKqyqOeASR7ET_pIJOV8GDoA7sIW9SrP31NYCq3vBf722o9sMNLLAOHxOuMPsAiiKCEcn-_uaYwmOLLeNKfh6h8SIa0rSN1YHFRqEY31akankW8hCilmRt46Zy932EOPcROP9dVkdcTd2NW0ZAYhoL8sGrdRXom_k7VmE2fd49646fXlp689THNl2RdYX86f"/>
+<button class="absolute top-4 right-4 p-2 bg-white/50 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+<p class="font-bold text-xs tracking-tight uppercase">Copper Sauté Pan</p>
+<p class="text-xs text-stone-500 mt-1">$210.00</p>
+</div>
+<!-- Product Card 3 -->
+<div class="group hidden md:block">
+<div class="aspect-[4/5] bg-stone-100 rounded-xl overflow-hidden mb-4 relative">
+<img alt="Culinary Linen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="textured close-up of high-quality folded linen kitchen towels in a neutral oatmeal color with delicate stitching" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUYzLUe_GqlpzdhSYsGWRmoa-7TxyiXflsZOM1z13Rg85bXFeHyBBSr4qPmSiQOOBQ0yvw66fTY1zRXDGk2QrQO5JDvF7_7AKynCAREpJFja2EaDS1E7FUACwrcPYBxVHUTsiUGCuyyoNeW9gqeBeVQtF_OwGtEi6wSTIlQyfoKGInskCQe5XbO1AEArJzt-PgYyoNCr9FoDVK-8TS_Xvk159Zt_S5ByZZzUULHybohTzqFOFuOUbzD3fmBt1sL2xz5LhK-7r9FcV1"/>
+<button class="absolute top-4 right-4 p-2 bg-white/50 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+<p class="font-bold text-xs tracking-tight uppercase">Organic Flax Linens</p>
+<p class="text-xs text-stone-500 mt-1">$85.00</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-stone-100 dark:bg-stone-900 border-t border-stone-200/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-[1440px] mx-auto">
+<div class="text-stone-900 dark:text-stone-100 font-serif italic text-sm">© 2024 LIORA Culinary Editorial. Toxin-Free Living.</div>
+<div class="flex gap-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 font-sans text-xs uppercase tracking-widest transition-opacity" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 font-sans text-xs uppercase tracking-widest transition-opacity" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 font-sans text-xs uppercase tracking-widest transition-opacity" href="#">Wholesale</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 font-sans text-xs uppercase tracking-widest transition-opacity" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

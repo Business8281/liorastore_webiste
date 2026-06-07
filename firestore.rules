@@ -1,0 +1,75 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if the user is an admin
+    function isAdmin() {
+      return request.auth != null && (
+        request.auth.token.email.lower() == 'admin@liorastore.in' ||
+        request.auth.token.email.lower() == 'praneeth0105@gmail.com'
+      );
+    }
+
+    // Public read access for products and metadata
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /combos/{comboId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /categories/{catId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /coupons/{couponId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /config/{configId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && (request.auth.uid == resource.data.userId || isAdmin());
+    }
+
+    // Shared collections with user data isolation
+    match /orders/{orderId} {
+      allow create: if true;
+      allow read: if request.auth != null && (request.auth.uid == resource.data.userId || isAdmin());
+      allow update: if isAdmin() || (
+        request.auth != null && 
+        request.auth.uid == resource.data.userId && 
+        request.resource.data.status in ['cancelled', 'return_requested', 'replacement_requested']
+      );
+      allow delete: if isAdmin();
+    }
+
+    match /wishlist/{wishId} {
+      allow read: if request.auth != null && (request.auth.uid == resource.data.userId || isAdmin());
+      allow write: if request.auth != null && (request.auth.uid == request.resource.data.userId || request.auth.uid == resource.data.userId || isAdmin());
+    }
+
+    match /addresses/{addrId} {
+      allow read: if request.auth != null && (request.auth.uid == resource.data.userId || isAdmin());
+      allow write: if request.auth != null && (request.auth.uid == request.resource.data.userId || request.auth.uid == resource.data.userId || isAdmin());
+    }
+
+    match /users/{userId} {
+      allow read, write: if request.auth != null && (request.auth.uid == userId || isAdmin());
+    }
+
+    match /pending_orders/{orderId} {
+      allow create, read, delete: if true;
+    }
+
+    // Fallback security
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

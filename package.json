@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.9",
+    "@heroicons/react": "^2.2.0",
+    "@phonepe-pg/pg-sdk-node": "^2.0.5",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/postcss": "^4.2.2",
+    "autoprefixer": "^10.4.27",
+    "axios": "^1.13.6",
+    "clsx": "^2.1.1",
+    "firebase": "^12.11.0",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.5",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.6.0",
+    "next": "^16.2.1",
+    "nodemailer": "^8.0.4",
+    "postcss": "^8.5.8",
+    "razorpay": "^2.9.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.2",
+    "vaul": "^1.1.2"
+  }
+}
